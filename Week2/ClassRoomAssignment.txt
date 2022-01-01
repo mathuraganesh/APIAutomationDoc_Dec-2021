@@ -1,0 +1,7 @@
+Create the Change Request and pass the json file
+
+
+
+1)Create Change Request with assertions(Status code & Content Type)
+2)Create Chnage request with body as String/file and verify the responseBody(using hamcrest)
+3)Get all change request and verify the newly created change request is included in list or not

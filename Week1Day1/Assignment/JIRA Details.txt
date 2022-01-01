@@ -1,0 +1,19 @@
+Jira Details:
+=============
+
+For API:
+========
+
+In Authorization ,type is Basic Auth
+
+url-https://api-may2020.atlassian.net
+username-hari.radhakrishnan@testleaf.com
+password-aZeu5Okc5H6bAteywwAd0F19
+
+
+For jira UI:
+============
+
+url-https://api-may2020.atlassian.net
+username-hari.radhakrishnan@testleaf.com
+password-India@123

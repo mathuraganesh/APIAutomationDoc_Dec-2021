@@ -1,0 +1,31 @@
+https://github.com/TestLeafPages/RestAPI-_DEC21/blob/main/Matschie.zip
+
+https://maven.apache.org/download.cgi
+
+
+
+Run Matschie Command-line
+===========================
+
+1.Steps to configure maven:
+https://maven.apache.org/download.cgi
+ - Download the maven binary zip
+ - unzip
+ - C:\Users\<admin>\Downloads\apache-maven-3.8.4\bin - add this path to the environment variable
+Step1: Donload Matschie.zip from https://github.com/TestLeafPages/RestAPI-_DEC21/blob/main/Matschie.zip
+Step2: Upzip the package into your local
+Step3: In the project explorer, import the existing maven project
+2.Steps to point JRE to JDK
+===========================
+Right Click JRE system Library -->Build Path-->Configure Build Path
+Double click on JRE system library --> select Alternate JRE
+To Execute from command line:
+=========================
+1. Go to the project folder and open command prompt
+2. mvn test
+3. mvn allure:serve
+
+
+
+
+https://developer.servicenow.com/blog.do?p=/post/inbound-oauth-auth-code-grant-flow-part-1/

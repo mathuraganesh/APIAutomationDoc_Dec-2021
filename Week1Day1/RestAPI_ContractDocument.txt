@@ -1,0 +1,30 @@
+Contract Document in Service Now
+
+Login->Filter Navigation->explorer->RestApi Explorer(Contract Document)
+
+https://dev117099.service-now.com/api/now/table/{tableName}
+
+https://dev117099.service-now.com/api/now/table/incident----EndPoint URL
+
+https://dev117099.service-now.com-----Base URI
+
+/api/now/table/incident-----------Resources
+
+
+401-Unauthorized
+
+
+Class Room session-I(Under ServiceNowCollection)
+__________________
+
+1)Get all the change Request displaying only sysid and description in the response
+2)Create the change request with request body(description and short description)
+3)Validate the status code as post condition
+
+
+Class Room session-II(Under ServiceNowCollection)
+__________________
+
+1)Get all the change Request displaying only sysid and description in the response in XML Format
+2)Create the change request with request body(description and short description) ---Req\Res in XML Format
+3)Create the change request with request body(description and short description) ---Req in JSON\Res in XML Format

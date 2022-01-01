@@ -1,0 +1,8 @@
+Assignment for the week 
+
+Implement the below in RestAssured
+
+1) create issue in jira
+2) Get all issues
+3) Update an issue 
+4) Delete the issue

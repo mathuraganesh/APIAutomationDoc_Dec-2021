@@ -1,0 +1,28 @@
+RestAssured+Cucumber
+
+
+BDD fraework:Behaviour Driven Developmenet
+=========================================
+
+Tech Team(Dev Team,QA,DB engineer,Architecs & etc)
+Non-Tech Team(BA/Product owners & Clients)
+
+Gherkin
+
+Create Incident
+
+1) Create a Package and followed by Feature File (Requirements)
+2) Create Scenario (for Test case)  under Incident Management.feature
+
+3) Create test steps for testcases(for scenarios)
+
+Given
+When
+Then/But
+And 
+
+
+1) set EndPoint
+2) set Authentication
+3) Perform the Request method
+4) Verify the Response
