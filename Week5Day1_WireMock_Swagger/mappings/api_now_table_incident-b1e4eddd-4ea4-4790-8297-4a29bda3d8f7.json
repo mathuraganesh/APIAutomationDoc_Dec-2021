@@ -1,0 +1,31 @@
+{
+  "id" : "b1e4eddd-4ea4-4790-8297-4a29bda3d8f7",
+  "name" : "api_now_table_incident",
+  "request" : {
+    "url" : "/api/now/table/incident",
+    "method" : "POST"
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"result\":{\"parent\":\"\",\"made_sla\":\"true\",\"caused_by\":\"\",\"watch_list\":\"\",\"upon_reject\":\"cancel\",\"sys_updated_on\":\"2022-01-05 17:01:00\",\"child_incidents\":\"0\",\"hold_reason\":\"\",\"task_effective_number\":\"INC0010157\",\"approval_history\":\"\",\"number\":\"INC0010157\",\"resolved_by\":\"\",\"sys_updated_by\":\"admin\",\"opened_by\":{\"link\":\"https://dev117099.service-now.com/api/now/table/sys_user/6816f79cc0a8016401c5a33be04be441\",\"value\":\"6816f79cc0a8016401c5a33be04be441\"},\"user_input\":\"\",\"sys_created_on\":\"2022-01-05 17:01:00\",\"sys_domain\":{\"link\":\"https://dev117099.service-now.com/api/now/table/sys_user_group/global\",\"value\":\"global\"},\"state\":\"1\",\"route_reason\":\"\",\"sys_created_by\":\"admin\",\"knowledge\":\"false\",\"order\":\"\",\"calendar_stc\":\"\",\"closed_at\":\"\",\"cmdb_ci\":\"\",\"delivery_plan\":\"\",\"contract\":\"\",\"impact\":\"3\",\"active\":\"true\",\"work_notes_list\":\"\",\"business_service\":\"\",\"priority\":\"5\",\"sys_domain_path\":\"/\",\"rfc\":\"\",\"time_worked\":\"\",\"expected_start\":\"\",\"opened_at\":\"2022-01-05 17:01:00\",\"business_duration\":\"\",\"group_list\":\"\",\"work_end\":\"\",\"caller_id\":\"\",\"reopened_time\":\"\",\"resolved_at\":\"\",\"approval_set\":\"\",\"subcategory\":\"\",\"work_notes\":\"\",\"universal_request\":\"\",\"short_description\":\"\",\"close_code\":\"\",\"correlation_display\":\"\",\"delivery_task\":\"\",\"work_start\":\"\",\"assignment_group\":\"\",\"additional_assignee_list\":\"\",\"business_stc\":\"\",\"description\":\"\",\"calendar_duration\":\"\",\"close_notes\":\"\",\"notify\":\"1\",\"service_offering\":\"\",\"sys_class_name\":\"incident\",\"closed_by\":\"\",\"follow_up\":\"\",\"parent_incident\":\"\",\"sys_id\":\"2a0498361bb0011005250f26624bcb0b\",\"contact_type\":\"\",\"reopened_by\":\"\",\"incident_state\":\"1\",\"urgency\":\"3\",\"problem_id\":\"\",\"company\":\"\",\"reassignment_count\":\"0\",\"activity_due\":\"\",\"assigned_to\":\"\",\"severity\":\"3\",\"comments\":\"\",\"approval\":\"not requested\",\"sla_due\":\"\",\"comments_and_work_notes\":\"\",\"due_date\":\"\",\"sys_mod_count\":\"0\",\"reopen_count\":\"0\",\"sys_tags\":\"\",\"escalation\":\"0\",\"upon_approval\":\"proceed\",\"correlation_id\":\"\",\"location\":\"\",\"category\":\"inquiry\"}}",
+    "headers" : {
+      "X-Is-Logged-In" : "true",
+      "X-Transaction-ID" : "ae045cb61bb0",
+      "Location" : "https://dev117099.service-now.com/api/now/table/incident/2a0498361bb0011005250f26624bcb0b",
+      "X-Content-Type-Options" : "nosniff",
+      "Pragma" : "no-store,no-cache",
+      "Cache-Control" : "no-cache,no-store,must-revalidate,max-age=-1",
+      "Expires" : "0",
+      "Content-Type" : "application/json;charset=UTF-8",
+      "Date" : "Wed, 05 Jan 2022 17:00:59 GMT",
+      "Server" : "ServiceNow",
+      "Set-Cookie" : [ "JSESSIONID=9B7C26543FE7F1C3A9487DDF502C3EB3; Path=/; HttpOnly; SameSite=None; Secure", "glide_user=; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; HttpOnly; SameSite=None; Secure", "glide_user_session=; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; HttpOnly; SameSite=None; Secure", "glide_user_route=glide.cdd057fb882a408f2a482aa322e2364e; Max-Age=2147483647; Expires=Mon, 23-Jan-2090 20:15:07 GMT; Path=/; HttpOnly; SameSite=None; Secure", "glide_session_store=6A045CB61BB0011005250F26624BCB7D; Max-Age=1800; Expires=Wed, 05-Jan-2022 17:31:00 GMT; Path=/; HttpOnly; SameSite=None; Secure", "BIGipServerpool_dev117099=427929098.3649.0000; path=/; Httponly; Secure; SameSite=None; Secure" ],
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains"
+    }
+  },
+  "uuid" : "b1e4eddd-4ea4-4790-8297-4a29bda3d8f7",
+  "persistent" : true,
+  "scenarioName" : "scenario-1-api-now-table-incident",
+  "requiredScenarioState" : "scenario-1-api-now-table-incident-2",
+  "insertionIndex" : 2
+}

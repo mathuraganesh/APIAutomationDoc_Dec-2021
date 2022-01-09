@@ -1,0 +1,11 @@
+Assignment(swagger, WireMock):
+==============================
+a) Swagger
+1) create a swagger document for Jira with Post, Delete, Patch, and Get
+b) WireMock:
+ ServiceNow:- 
+ i) Create a change request of type emergency with the body of XML type and Validate status code, contentType, and Body with a change request, Using WireMock stub for.
+ii) Get All change requests and print the change request number that belongs to of type Normal, Using WireMock recording. 
+ Jira:-
+ i) Create an Issue in Jira with the body as JSON type and Validate status code, contentType, and Body with a change request, Using WireMock stubfor.
+ii) Get All Issues from the project and print the Id(or)Key, Using WireMock recording.

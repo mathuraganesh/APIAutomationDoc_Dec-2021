@@ -1,0 +1,30 @@
+{
+  "id" : "0982adbc-fd20-4768-acba-514ee0f0d31f",
+  "name" : "api_now_table_incident",
+  "request" : {
+    "url" : "/api/now/table/incident",
+    "method" : "POST"
+  },
+  "response" : {
+    "status" : 401,
+    "body" : "{\"error\":{\"message\":\"User Not Authenticated\",\"detail\":\"Required to provide Auth information\"},\"status\":\"failure\"}",
+    "headers" : {
+      "WWW-Authenticate" : "BASIC realm=\"Service-now\"",
+      "X-Content-Type-Options" : "nosniff",
+      "Pragma" : "no-store,no-cache",
+      "Cache-Control" : "no-cache,no-store,must-revalidate,max-age=-1",
+      "Expires" : "0",
+      "Content-Type" : "application/json;charset=UTF-8",
+      "Date" : "Wed, 05 Jan 2022 17:00:58 GMT",
+      "Server" : "ServiceNow",
+      "Set-Cookie" : [ "JSESSIONID=A298FA4D85782DBD5B3FABF9E6639B04; Path=/; HttpOnly; SameSite=None; Secure", "glide_user=; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; HttpOnly; SameSite=None; Secure", "glide_user_session=; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; HttpOnly; SameSite=None; Secure", "BIGipServerpool_dev117099=427929098.3649.0000; path=/; Httponly; Secure; SameSite=None; Secure" ],
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains"
+    }
+  },
+  "uuid" : "0982adbc-fd20-4768-acba-514ee0f0d31f",
+  "persistent" : true,
+  "scenarioName" : "scenario-1-api-now-table-incident",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-1-api-now-table-incident-2",
+  "insertionIndex" : 1
+}

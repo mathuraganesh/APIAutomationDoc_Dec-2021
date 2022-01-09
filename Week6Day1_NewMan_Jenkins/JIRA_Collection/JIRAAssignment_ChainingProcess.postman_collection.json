@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "e7d0979a-a3f2-4635-9a02-4298679a1f37",
+		"name": "JIRA Assignment_Chaining Process",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllIssues",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api-may2020.atlassian.net/rest/api/2/search?jql=project=\"RA\"",
+					"protocol": "https",
+					"host": [
+						"api-may2020",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"search"
+					],
+					"query": [
+						{
+							"key": "jql",
+							"value": "project=\"RA\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateAnIssue",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var IssueId=pm.response.json().id;\r",
+							"pm.globals.set(\"col_Issue_Id\",IssueId);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fields\": {\r\n        \"project\": {\r\n            \"key\": \"RA\"\r\n        },\r\n        \"summary\": \"create issue in RA project\",\r\n        \"description\": \"Creating of an issue using project keys and issue type names using the REST API\",\r\n        \"issuetype\": {\r\n            \"name\": \"Bug\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-may2020.atlassian.net/rest/api/2/issue/",
+					"protocol": "https",
+					"host": [
+						"api-may2020",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"issue",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateAnIssue",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fields\": {\r\n        \"description\": \"Issue updated via RestAssured on Oct 21 2021 --second time\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-may2020.atlassian.net/rest/api/2/issue/{{col_Issue_Id}}",
+					"protocol": "https",
+					"host": [
+						"api-may2020",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"issue",
+						"{{col_Issue_Id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteAnIssue",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api-may2020.atlassian.net/rest/api/2/issue/{{col_Issue_Id}}",
+					"protocol": "https",
+					"host": [
+						"api-may2020",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"issue",
+						"{{col_Issue_Id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "Edlmc89n3ez7IdGHjCv5A863",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "hari.radhakrishnan@testleaf.com",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

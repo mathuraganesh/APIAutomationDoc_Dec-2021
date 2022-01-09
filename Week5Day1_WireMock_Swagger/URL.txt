@@ -1,0 +1,24 @@
+http://wiremock.org/docs/download-and-installation/
+
+
+
+https://mvnrepository.com/artifact/com.github.tomakehurst/wiremock-jre8/2.32.0
+
+Run in Cmd
+java -jar wiremock-jre8-standalone-2.32.0.jar
+
+To Change Port Number
+java -jar wiremock-jre8-standalone-2.32.0.jar -port=8081
+
+
+To Recorder
+http://wiremock.org/docs/record-playback/
+http://localhost:8080/__admin/recorder/
+
+
+To Template
+http://wiremock.org/docs/response-templating/
+placed the temp.json in mapping->temp.json
+
+in Cmd
+java -jar wiremock-jre8-standalone-2.32.0.jar --global-response-templating

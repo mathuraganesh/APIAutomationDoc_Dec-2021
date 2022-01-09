@@ -1,0 +1,178 @@
+swagger: "2.0"
+info:
+  description: "Use built-in best practices to rapidly consolidate disparate tools to a single system of engagement in the cloud. Harness your shared data and analytics with the most trusted IT service workflows."
+  version: "1.0.0"
+  title: "JIRAIssue"
+  termsOfService: "https://www.servicenow.com/terms-of-use.html"
+  contact:
+    email: "apiteam@swagger.io"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "api-may2020.atlassian.net"
+basePath: "/rest/api/2"
+tags:
+- name: "JIRA Issue"
+  description: "Everything about your Issue"
+  externalDocs:
+    description: "Find out more"
+    url: "http://swagger.io"
+schemes:
+- "https"
+
+paths:
+  /issue:
+    post:
+      tags:
+      - "issue"
+      summary: "Add a new Issue to the JIRA"
+      description: ""
+      operationId: "addIssue"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Issue that needs to be added to the JIRA"
+        required: true
+        schema:
+          $ref: "#/definitions/JIRAbody"
+      responses:
+        "201":
+          description: "Created"
+        "405":
+          description: "Invalid input"
+      security:
+      - JIRAIssue_auth:
+        - "write:JIRAIssue"
+        - "read:JIRAIssue"
+    put:
+      tags:
+      - "issue"
+      summary: "Update an existing issue"
+      description: ""
+      operationId: "updateIssue"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "issue object that needs to be added to the JIRA"
+        required: true
+        schema:
+          $ref: "#/definitions/JIRAbody"
+      responses:
+        "200":
+          description: "good"
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "Pet not found"
+        "405":
+          description: "Validation exception"
+      security:
+      - JIRAIssue_auth:
+        - "write:JIRAIssue"
+        - "read:JIRAIssue"
+ 
+  /issue/{id}:
+    get:
+      tags:
+      - "issue"
+      summary: "Find issue by ID"
+      description: "Returns a single issue"
+      operationId: "getIssueById"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "ID of pet to return"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/JIRAIssue"
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "Pet not found"
+      security:
+      - JIRAIssue_auth:
+        - "write:JIRAIssue"
+        - "read:JIRAIssue"
+ 
+    delete:
+      tags:
+      - "issue"
+      summary: "Deletes a issue"
+      description: ""
+      operationId: "deleteissue"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "ID of pet to return"
+        required: true
+        type: "string"
+      responses:
+        "204":
+          description: "data removed"
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: " not found"
+      security:
+      - JIRAIssue_auth:
+        - "write:JIRAIssue"
+        - "read:JIRAIssue"
+  
+ 
+securityDefinitions:
+  JIRAIssue_auth:
+    type: "oauth2"
+    authorizationUrl: "hhttps://api-may2020.atlassian.net/oauth_auth.do"
+    tokenUrl: "https://api-may2020.atlassian.net/oauth_token.do"
+    flow: "accessCode"
+    scopes:
+      write:JIRAIssue: "modify issue in your account"
+      read:JIRAIssue: "read your issue"
+  api_key:
+    type: "apiKey"
+    name: "api_key"
+    in: "header"
+    
+    
+definitions:
+  JIRAIssue:
+    type: "object"
+    properties:
+      sys_id:
+        type: "string"
+  JIRAbody:
+    type: "object"
+    properties:
+       key:
+        type: "string"
+       description:
+        type: "string"
+    xml:
+      name: "JIRAbody"
+  
+  
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://swagger.io"

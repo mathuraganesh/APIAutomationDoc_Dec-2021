@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "9ae6ccf3-ce0a-435f-bd26-8b247b06e938",
+		"name": "NewMan_ChangeRequest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetChangeRequest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{env_host_name}}/api/now/table/{{col_table_name}}",
+					"protocol": "https",
+					"host": [
+						"{{env_host_name}}"
+					],
+					"path": [
+						"api",
+						"now",
+						"table",
+						"{{col_table_name}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "x5g2eiBRNfQY",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "admin",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "col_table_name",
+			"value": "change_request",
+			"type": "string"
+		}
+	]
+}

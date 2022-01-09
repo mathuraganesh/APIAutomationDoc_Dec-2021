@@ -1,0 +1,30 @@
+{
+  "id" : "28b97fbc-8e5a-4a88-8825-68e3774b2a90",
+  "name" : "api_now_table_change_request",
+  "request" : {
+    "url" : "/api/now/table/change_request?type=normal",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 401,
+    "body" : "{\"error\":{\"detail\":\"Required to provide Auth information\",\"message\":\"User Not Authenticated\"},\"status\":\"failure\"}",
+    "headers" : {
+      "WWW-Authenticate" : "BASIC realm=\"Service-now\"",
+      "X-Content-Type-Options" : "nosniff",
+      "Pragma" : "no-store,no-cache",
+      "Cache-Control" : "no-cache,no-store,must-revalidate,max-age=-1",
+      "Expires" : "0",
+      "Content-Type" : "application/json;charset=UTF-8",
+      "Date" : "Sun, 09 Jan 2022 14:57:06 GMT",
+      "Server" : "ServiceNow",
+      "Set-Cookie" : [ "JSESSIONID=42D58440D3D2F5CA0F89F76638D094BE; Path=/; HttpOnly; SameSite=None; Secure", "glide_user=; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; HttpOnly; SameSite=None; Secure", "glide_user_session=; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; HttpOnly; SameSite=None; Secure", "BIGipServerpool_dev117099=427929098.3649.0000; path=/; Httponly; Secure; SameSite=None; Secure" ],
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains"
+    }
+  },
+  "uuid" : "28b97fbc-8e5a-4a88-8825-68e3774b2a90",
+  "persistent" : true,
+  "scenarioName" : "scenario-1-api-now-table-change_request",
+  "requiredScenarioState" : "scenario-1-api-now-table-change_request-3",
+  "newScenarioState" : "scenario-1-api-now-table-change_request-4",
+  "insertionIndex" : 6
+}

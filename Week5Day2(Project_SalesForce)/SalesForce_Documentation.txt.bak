@@ -1,0 +1,57 @@
+Sales Force: 
+
+Manually Create your own account: https://developer.salesforce.com/
+Endpoint :  
+
+https://ap16.salesforce.com/services/data/v20.0
+		- Create a client in salesforce
+
+Manually Create a New App then get Client ID and Client Secret -> https://blog.mkorman.uk/using-postman-to-explore-salesforce-restful-web-services/
+Exampl API : https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_code.htm
+
+list of Object : https://ap16.salesforce.com/services/data/v20.0/sobjects/
+
+Ex: https://d2w00000abvdkead-dev-ed.my.salesforce.com/services/data/v20.0/sobjects/
+
+
+Scenario1:
+==========
+
+ "urls": {
+                "rowTemplate": "/services/data/v20.0/sobjects/Contact/{ID}", ->  get a single record,Upadte a single record,Delete a single record
+                "describe": "/services/data/v20.0/sobjects/Contact/describe", list of Fields
+
+                "sobject": "/services/data/v20.0/sobjects/Contact" ->  create a single record
+            }
+
+a) Create a new contact and verify the contact name
+
+URI: https://ap16.salesforce.com/services/data/v20.0/sobjects/contact
+Authorization: Bearer token
+Content-Type: application/json
+
+Ex: Request Body 
+	{
+    	"FirstName": "string",
+    	"LastName": "string", 
+	}
+b) Update the new same contact with different address and verify the contact name.
+c) List all the contact and verify the newly created is there.
+
+Scenario2:
+==========
+"urls": {
+                "rowTemplate": "/services/data/v20.0/sobjects/Lead/{ID}", -> get a single record,Upadte a single record,Delete a single record
+                "describe": "/services/data/v20.0/sobjects/Lead/describe", -> list of Fields
+
+                "sobject": "/services/data/v20.0/sobjects/Lead" - > create a single record
+            }
+a) Create a new Lead
+Ex: Request Body 
+	{
+    	"FirstName": "string",
+    	"LastName": "string",
+    	"Company": "string"  
+	}
+b) Update the same Lead 
+c) Delete the same Lead and Get all the Lead and verify the lead is removed
